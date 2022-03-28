@@ -1,4 +1,4 @@
-# api-teste-rxjava
+# api-test-rxjava
 A little API based on async call using the libary RxJava.
 # Getting started
 The first step is to download all dependencies, you can use the bash command: 
