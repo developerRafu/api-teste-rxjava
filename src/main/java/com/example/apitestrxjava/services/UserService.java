@@ -25,7 +25,7 @@ public class UserService {
 
     private void getStarWars(UserResponse response) {
         Flowable.just(starWarsService.getName(response.getStId()))
-                .subscribe(response::setFavoriteChar, throwable -> throwError(throwable));
+                .subscribe(response::setPersonagemFavorito, this::throwError);
     }
 
     private void throwError(Throwable throwable) throws Throwable {
@@ -40,7 +40,7 @@ public class UserService {
     public void getUser(UserResponse response) {
         Flowable.just(UserRespository.getUser())
                 .subscribe(res -> {
-                    response.setName(res.getName());
+                    response.setNome(res.getName());
                     response.setId(res.getId());
                     response.setCep(res.getCep());
                     response.setStId(res.getIdStarWars());
