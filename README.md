@@ -11,3 +11,6 @@ After that you can run the application on you IDE or via bash command:
 
 So go to your local port 8080 and make a get request for /users path like this:
 ```http://localhost:8080/users```
+
+
+For a quick view, check this link: https://app-rx-java.herokuapp.com/users
